@@ -2,23 +2,25 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Bark Pro</title>
+    <title>Bark</title>
+    <style>
+      button.motion {
+        background-color: dodgerBlue;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <h1>Bark's more standard game engine</h1>
     <br/>
     <span id="code">
     </span>
+    <br/>
+    <button onclick="addBlock()"></button>
   </body>
   <script>
     function addBlock() {
-      const node = document.createElement("button");
-
-      const textnode = document.createTextNode("test");
-
-      node.appendChild(textnode);
-
-      document.getElementById("code").appendChild(node);
-}
+      document.getElementById("code").innerHTML += "<button class='motion'>text</button></br>";
+    }
   </script>
 </html>
