@@ -10,9 +10,9 @@
     <p>Library:</p>
     <button onclick="addBlock('start', 'start')" class='start'>start</button><br/><br/>
     <button onclick="addBlock('motion', 'move')" class='motion'>move</button><br/><br/>
-    <button onclick="addBlock('motion', 'go to center')" class='motion'>go to center</button><br/>
-    <input type="text" placeholder="x"><br/>
-    <input type="text" placeholder="y">
+    <button onclick="addBlock('motion', 'go to '+ document.getElementById('gotocenterx') + ', ' + document.getElementById('gotocentery'))" class='motion'>go to center</button><br/>
+    <input id="gotocenterx" type="text" placeholder="x"><br/>
+    <input id="gotocentery" type="text" placeholder="y">
     <br/>
     <hr/>
     <span id="code">
