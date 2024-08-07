@@ -8,16 +8,16 @@
   <body>
     <h1>Bark's more standard game engine</h1>
     <br/>
+    <button onclick="addBlock(motion, 'move')" class='motion'>move</button><br/>
+    <button onclick="addBlock(gotocenter, 'go to center')" class='gotocenter'>go to center</button><br/>
+    <button onclick="addBlock(start, 'start')" class='start'>start</button><br/>
+    <br/>
     <span id="code">
     </span>
-    <br/>
-    <button onclick="addBlock()" class='motion'>Add</button><br/>
-    <button onclick="addBlock()" class='gotocenter'>Add</button><br/>
-    <button onclick="addBlock()" class='start'>Add</button><br/>
   </body>
   <script>
-    function addBlock() {
-      document.getElementById("code").innerHTML += "<button class='motion'>move</button></br>";
+    function addBlock(classname, text) {
+      document.getElementById("code").innerHTML += "<button class='"+classname+"'>"+text+"</button></br>";
       let clapsound = new Audio('clap.mp3');
       clapsound.play()
     }
